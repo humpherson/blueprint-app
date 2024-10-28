@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1730117675052.8289,
+    "position": 1,
+    "stage": "Awareness",
+    "customerEmotions": "Happy",
+    "customerActions": "Searches for food delivery options online, sees ad.",
+    "frontstageInteractions": "Social media ads, Google search results, app promotions.",
+    "backstageInteractions": "Marketing team schedules and runs targeted ad campaigns.",
+    "supportProcesses": "Ad platforms (Google Ads, social media), CRM for targeted marketing.",
+    "physicalEvidence": "Ads on social media, app notifications"
+  },
+  {
+    "id": 1730117675052.6812,
+    "position": 2,
+    "stage": "Consideration",
+    "customerEmotions": "neutral",
+    "customerActions": "Visits the website/app, browses restaurant options.",
+    "frontstageInteractions": "Homepage UI, search filters, restaurant listings.",
+    "backstageInteractions": "Content management system updates, restaurant data maintenance.",
+    "supportProcesses": "Restaurant data providers, CMS for listing updates.",
+    "physicalEvidence": "App interface, website layout"
+  },
+  {
+    "id": 1730117675052.6309,
+    "position": 3,
+    "stage": "Ordering",
+    "customerEmotions": "frustrated",
+    "customerActions": "Selects items, adds to cart, initiates checkout.",
+    "frontstageInteractions": "Visible cart, checkout UI, order confirmation screen.",
+    "backstageInteractions": "Processes order in backend, calculates delivery time, checks restaurant availability.",
+    "supportProcesses": "Payment gateway, inventory, restaurant API connections.",
+    "physicalEvidence": "Order confirmation email or app notification"
+  },
+  {
+    "id": 1730117675052.8262,
+    "position": 4,
+    "stage": "Payment",
+    "customerEmotions": "confused",
+    "customerActions": "Enters payment details, confirms payment.",
+    "frontstageInteractions": "Secure payment gateway interface, payment confirmation page.",
+    "backstageInteractions": "Processes payment, verifies transaction status, sends payment confirmation.",
+    "supportProcesses": "Secure payment processing system (Stripe, PayPal).",
+    "physicalEvidence": "Receipt email, confirmation screen"
+  },
+  {
+    "id": 1730117675052.5645,
+    "position": 5,
+    "stage": "Preparation",
+    "customerEmotions": "angry",
+    "customerActions": "Receives estimated time of delivery, waits for order.",
+    "frontstageInteractions": "App provides real-time updates on order prep status.",
+    "backstageInteractions": "Kitchen staff prepares order; backend system updates order status in real-time.",
+    "supportProcesses": "Order management system, kitchen display systems.",
+    "physicalEvidence": "In-app status updates, SMS notification"
+  },
+  {
+    "id": 1730117675052.0464,
+    "position": 6,
+    "stage": "Delivery",
+    "customerEmotions": "sad",
+    "customerActions": "Tracks delivery, interacts with delivery person at handoff.",
+    "frontstageInteractions": "Map showing delivery progress, notification of arrival.",
+    "backstageInteractions": "Dispatcher assigns delivery person, app guides delivery route.",
+    "supportProcesses": "GPS tracking system, dispatcher software, driver app.",
+    "physicalEvidence": "In-app map, \"Order Arriving\" notification"
+  },
+  {
+    "id": 1730117675052.0483,
+    "position": 7,
+    "stage": "Post-Delivery",
+    "customerEmotions": "disappointed",
+    "customerActions": "Rates order and provides feedback, if desired.",
+    "frontstageInteractions": "Review prompt, feedback form, and customer service option in app.",
+    "backstageInteractions": "Collects and analyzes feedback, flags complaints for support team follow-up.",
+    "supportProcesses": "Customer feedback database, support ticketing system.",
+    "physicalEvidence": "Thank-you message, feedback form in app"
+  }
+]
