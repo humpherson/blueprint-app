@@ -1,46 +1,30 @@
 // components/section/CustomerEmotions.js
-import React, { forwardRef } from "react"; // Import React and forwardRef for handling refs
-import emoji from "emoji-dictionary"; // Import emoji dictionary for emoji conversion
+import React, { forwardRef } from "react";
+import emotions from "../../../data/emotions";
 
-// Function to convert emotion words to emojis
+// Function to get the emoji based on the emotion value
 const getEmoji = (emotion) => {
-  switch (emotion.toLowerCase()) {
-    case "happy":
-      return emoji.getUnicode("smile"); // Return smiling emoji for "happy" 😊
-    case "neutral":
-      return emoji.getUnicode("neutral_face"); // Return neutral face emoji for "neutral" 😐
-    case "frustrated":
-      return emoji.getUnicode("confounded"); // Return confounded emoji for "frustrated" 😖
-    case "confused":
-      return emoji.getUnicode("thinking"); // Return thinking emoji for "confused" 🤔
-    case "angry":
-      return emoji.getUnicode("angry"); // Return angry emoji for "angry" 😠
-    case "sad":
-      return emoji.getUnicode("cry"); // Return crying emoji for "sad" 😢
-    case "disappointed":
-      return emoji.getUnicode("disappointed"); // Return disappointed emoji for "disappointed" 😞
-    default:
-      return emoji.getUnicode("question"); // Return question emoji for unknown emotions ❓
-  }
+  const foundEmotion = emotions.find(
+    (item) => item.value === emotion.toLowerCase()
+  );
+  return foundEmotion
+    ? foundEmotion.emoji
+    : emotions.find((item) => item.value === "unknown").emoji;
 };
 
-// Create CustomerEmotions component using forwardRef to allow parent components to access its ref
+// CustomerEmotions component
 const CustomerEmotions = forwardRef(({ data, minHeight }, ref) => {
-  const emotionEmoji = getEmoji(data); // Get the emoji for the given emotion
-
-  // Debugging line to see what's being passed as data
-  // console.log("Customer Emotion Data:", data);
+  const emotionEmoji = getEmoji(data);
 
   return (
     <div
-      ref={ref} // Attach ref for parent access
-      className="mb-4 p-4 border-2 border-orange-300 bg-orange-50 rounded-lg shadow-sm flex items-center justify-center" // Styling for the container
-      style={{ minHeight }} // Set minimum height from props
+      ref={ref}
+      className="mb-4 p-4 border-2 border-orange-300 bg-orange-50 rounded-lg shadow-sm flex items-center justify-center"
+      style={{ minHeight }}
     >
-      <span className="text-4xl">{emotionEmoji || "❓"}</span>{" "}
-      {/* Display the emoji or a question mark if none found */}
+      <span className="text-4xl">{emotionEmoji}</span>
     </div>
   );
 });
 
-export default CustomerEmotions; // Export the CustomerEmotions component
+export default CustomerEmotions;
